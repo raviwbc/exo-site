@@ -1,189 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-      <div class="min-h-screen bg-background">
-        <div id="tapbar"></div>
-        <main>
-          
-          <div id="hero"></div>  
-          <div id="solution"></div>  
-          <div id="clients"></div>
-          
-          
-        </main>
-        <div id="footer"></div>
-        
+  </head>
+  <body>
+    <div class="min-h-screen bg-background">
+      <span id="tapbar"></span>
+      <main>
+        <span id="hero"></span>
+        <span id="solution"></span>
+        <span id="clients"></span>
+      </main>
+      <span id="footer"></span>
     </div>
     <script>
-    fetch("components/hero.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("hero").innerHTML = data;
-      });
-      
+      fetch("components/hero.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("hero").innerHTML = data;
+        });
+
       fetch("components/tabnav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("tapbar").innerHTML = data;
-      });  
-            fetch("components/solution.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("solution").innerHTML = data;
-      });  
-                  fetch("components/clients.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("clients").innerHTML = data;
-      });
-                        fetch("components/footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });   
-      
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("tapbar").innerHTML = data;
+        });
+      fetch("components/solution.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("solution").innerHTML = data;
+        });
+      fetch("components/clients.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("clients").innerHTML = data;
+        });
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
 
-    debugger
-  let solutions = [
-    {
-      icon: "Map",
-      title: "Interactive Floor Maps",
-      description:
-        "Visualize floor layouts and choose seats with intuitive, interactive maps that provide real-time visibility of workspace availability.",
-      features: [
-        "Real-time seat visualization",
-        "Interactive navigation",
-        "Floor plan management",
-      ],
-    },
-    {
-      icon: "Users",
-      title: "Social Connectivity",
-      description:
-        "Make social connections and work near your colleagues. Add colleagues to your network to view their bookings and find nearby seats.",
-      features: [
-        "Colleague network",
-        "Proximity seating",
-        "Social booking recommendations",
-      ],
-    },
-    {
-      icon: "QrCode",
-      title: "QR Code Check-in/Out",
-      description:
-        "QR code-based check-in/out system to confirm occupancy and ensure accurate space utilization tracking.",
-      features: [
-        "Touchless verification",
-        "Automated attendance",
-        "Real-time occupancy tracking",
-      ],
-    },
-    {
-      icon: "Bell",
-      title: "Smart Notifications",
-      description:
-        "Reservation reminders and easy updates help you free up space for your colleagues and manage bookings efficiently.",
-      features: [
-        "Booking reminders",
-        "Space release alerts",
-        "Schedule management",
-      ],
-    },
-    {
-      icon: "Building2",
-      title: "Employee Grade Allocation",
-      description:
-        "Employee grade-based seat allocation with various options including Workstations, Half Cabins, Full Cabins, and Executive Cabins.",
-      features: [
-        "Grade-based seating",
-        "Multiple cabin types",
-        "Executive workspace options",
-      ],
-    },
-    {
-      icon: "BarChart3",
-      title: "Space Utilization Analytics",
-      description:
-        "Harness unparalleled insights into daily on-site activities to revolutionize office layouts and curtail space wastage.",
-      features: [
-        "Usage analytics",
-        "Capacity optimization",
-        "Cost reduction insights",
-      ],
-    },
-    {
-      icon: "Navigation",
-      title: "Guided Routing",
-      description:
-        "Guided routing on maps for easy access to booked seat locations, enhancing navigation efficiency within large office spaces.",
-      features: [
-        "Turn-by-turn navigation",
-        "Optimal path finding",
-        "Accessibility routing",
-      ],
-    },
-    {
-      icon: "Smartphone",
-      title: "Mobile-First Platform",
-      description:
-        "Complete mobile accessibility with QR code scanner for check-in/out, ensuring seamless workspace management from any device.",
-      features: ["Mobile booking", "QR scanning", "On-the-go management"],
-    },
-    {
-      icon: "Shield",
-      title: "Secure Access Control",
-      description:
-        "Enterprise-grade security with facial recognition-based seat check-in and advanced access management features.",
-      features: [
-        "Facial recognition",
-        "Secure authentication",
-        "Access control integration",
-      ],
-    },
-    {
-      icon: "Network",
-      title: "BMS Integration",
-      description:
-        "API-based integration with other Building Management Systems for comprehensive facility management and automation.",
-      features: [
-        "BMS connectivity",
-        "System integration",
-        "Automated workflows",
-      ],
-    },
-    {
-      icon: "Zap",
-      title: "Predictive Technology",
-      description:
-        "Advanced space recommendation engine helps employees connect and collaborate while securing optimal workspace locations.",
-      features: [
-        "AI recommendations",
-        "Predictive analytics",
-        "Smart matching",
-      ],
-    },
-    {
-      icon: "Award",
-      title: "Cost-Effective Solution",
-      description:
-        "Unmatched value with significant cost advantage compared to leading market players, offering premium features at competitive pricing.",
-      features: [
-        "Cost optimization",
-        "Premium features",
-        "Competitive advantage",
-      ],
-    },
-  ];
+      debugger;
+      let solutions = [
+        {
+          icon: "Map",
+          title: "Interactive Floor Maps",
+          description:
+            "Visualize floor layouts and choose seats with intuitive, interactive maps that provide real-time visibility of workspace availability.",
+          features: [
+            "Real-time seat visualization",
+            "Interactive navigation",
+            "Floor plan management",
+          ],
+        },
+        {
+          icon: "Users",
+          title: "Social Connectivity",
+          description:
+            "Make social connections and work near your colleagues. Add colleagues to your network to view their bookings and find nearby seats.",
+          features: [
+            "Colleague network",
+            "Proximity seating",
+            "Social booking recommendations",
+          ],
+        },
+        {
+          icon: "QrCode",
+          title: "QR Code Check-in/Out",
+          description:
+            "QR code-based check-in/out system to confirm occupancy and ensure accurate space utilization tracking.",
+          features: [
+            "Touchless verification",
+            "Automated attendance",
+            "Real-time occupancy tracking",
+          ],
+        },
+        {
+          icon: "Bell",
+          title: "Smart Notifications",
+          description:
+            "Reservation reminders and easy updates help you free up space for your colleagues and manage bookings efficiently.",
+          features: [
+            "Booking reminders",
+            "Space release alerts",
+            "Schedule management",
+          ],
+        },
+        {
+          icon: "Building2",
+          title: "Employee Grade Allocation",
+          description:
+            "Employee grade-based seat allocation with various options including Workstations, Half Cabins, Full Cabins, and Executive Cabins.",
+          features: [
+            "Grade-based seating",
+            "Multiple cabin types",
+            "Executive workspace options",
+          ],
+        },
+        {
+          icon: "BarChart3",
+          title: "Space Utilization Analytics",
+          description:
+            "Harness unparalleled insights into daily on-site activities to revolutionize office layouts and curtail space wastage.",
+          features: [
+            "Usage analytics",
+            "Capacity optimization",
+            "Cost reduction insights",
+          ],
+        },
+        {
+          icon: "Navigation",
+          title: "Guided Routing",
+          description:
+            "Guided routing on maps for easy access to booked seat locations, enhancing navigation efficiency within large office spaces.",
+          features: [
+            "Turn-by-turn navigation",
+            "Optimal path finding",
+            "Accessibility routing",
+          ],
+        },
+        {
+          icon: "Smartphone",
+          title: "Mobile-First Platform",
+          description:
+            "Complete mobile accessibility with QR code scanner for check-in/out, ensuring seamless workspace management from any device.",
+          features: ["Mobile booking", "QR scanning", "On-the-go management"],
+        },
+        {
+          icon: "Shield",
+          title: "Secure Access Control",
+          description:
+            "Enterprise-grade security with facial recognition-based seat check-in and advanced access management features.",
+          features: [
+            "Facial recognition",
+            "Secure authentication",
+            "Access control integration",
+          ],
+        },
+        {
+          icon: "Network",
+          title: "BMS Integration",
+          description:
+            "API-based integration with other Building Management Systems for comprehensive facility management and automation.",
+          features: [
+            "BMS connectivity",
+            "System integration",
+            "Automated workflows",
+          ],
+        },
+        {
+          icon: "Zap",
+          title: "Predictive Technology",
+          description:
+            "Advanced space recommendation engine helps employees connect and collaborate while securing optimal workspace locations.",
+          features: [
+            "AI recommendations",
+            "Predictive analytics",
+            "Smart matching",
+          ],
+        },
+        {
+          icon: "Award",
+          title: "Cost-Effective Solution",
+          description:
+            "Unmatched value with significant cost advantage compared to leading market players, offering premium features at competitive pricing.",
+          features: [
+            "Cost optimization",
+            "Premium features",
+            "Competitive advantage",
+          ],
+        },
+      ];
 
-  let htmpList = "";
-  solutions.forEach((resp) => {
-    htmpList += `
+      let htmpList = "";
+      solutions.forEach((resp) => {
+        htmpList += `
           <div
             class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-2 transition">
             <div class="text-center mb-4">
@@ -195,20 +190,20 @@
             <p class="text-gray-600 text-sm mb-4">${resp.description}</p>
              <ul class="space-y-2 text-sm text-gray-600">`;
 
-    resp.features.forEach((innerResp) => {
-      htmpList += `<li class="flex items-center">
+        resp.features.forEach((innerResp) => {
+          htmpList += `<li class="flex items-center">
                 <span class="w-1 h-1 bg-blue-600 rounded-full mr-2"></span> ${innerResp} </li>`;
-    });
-    htmpList += `
+        });
+        htmpList += `
             </ul>
             </div>
             `;
-  });
-  console.log(htmpList)
+      });
+      console.log(htmpList);
 
-setTimeout(()=>{
-    document.getElementById("cardData").innerHTML = htmpList;
-},100)
-</script>
-</body>
+      setTimeout(() => {
+        document.getElementById("cardData").innerHTML = htmpList;
+      }, 100);
+    </script>
+  </body>
 </html>
