@@ -8,12 +8,17 @@
 </head>
 <body>
       <div class="min-h-screen bg-background">
+        <div id="tapbar"></div>
         <main>
-          <div id="tapbar"></div>
+          
           <div id="hero"></div>  
           <div id="solution"></div>  
-                  
+          <div id="clients"></div>
+          
+          
         </main>
+        <div id="footer"></div>
+        
     </div>
     <script>
     fetch("components/hero.html")
@@ -31,7 +36,18 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("solution").innerHTML = data;
-      });      
+      });  
+                  fetch("components/clients.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("clients").innerHTML = data;
+      });
+                        fetch("components/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });   
+      
 
     debugger
   let solutions = [
