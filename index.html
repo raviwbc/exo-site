@@ -4,21 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom_style.css">
+     <script>
+      window.tailwind = {
+        config: {
+          darkMode: "class",
+         theme: {
+        extend: {
+          colors: {
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            popover: { DEFAULT: 'hsl(var(--popover))', foreground: 'hsl(var(--popover-foreground))' },
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            accent: { DEFAULT: 'hsl(var(--accent))', foreground: 'hsl(var(--accent-foreground))' },
+            destructive: { DEFAULT: 'hsl(var(--destructive))', foreground: 'hsl(var(--destructive-foreground))' },
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            chart: {
+              1: 'hsl(var(--chart-1))',
+              2: 'hsl(var(--chart-2))',
+              3: 'hsl(var(--chart-3))',
+              4: 'hsl(var(--chart-4))',
+              5: 'hsl(var(--chart-5))'
+            }
+          },
+          borderRadius: {
+            lg: 'var(--radius)',
+            md: 'calc(var(--radius) - 2px)',
+            sm: 'calc(var(--radius) - 4px)'
+          }
+        }
+      }
+        }
+      }
+    </script>
+
+    
+   
+
+    
+    
 </head>
 <body>
       <div class="min-h-screen bg-background">
         <div id="tapbar"></div>
-        <main>
-          
+        <main>          
           <div id="hero"></div>  
           <div id="solution"></div>  
           <div id="clients"></div>
-          
-          
         </main>
         <div id="footer"></div>
-        
+       
     </div>
     <script>
     fetch("components/hero.html")
@@ -26,7 +67,7 @@
       .then(data => {
         document.getElementById("hero").innerHTML = data;
       });
-      
+     
       fetch("components/tabnav.html")
       .then(response => response.text())
       .then(data => {
@@ -46,9 +87,9 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("footer").innerHTML = data;
-      });   
-      
-
+      });  
+     
+ 
     debugger
   let solutions = [
     {
@@ -180,7 +221,7 @@
       ],
     },
   ];
-
+ 
   let htmpList = "";
   solutions.forEach((resp) => {
     htmpList += `
@@ -194,7 +235,7 @@
             </div>
             <p class="text-gray-600 text-sm mb-4">${resp.description}</p>
              <ul class="space-y-2 text-sm text-gray-600">`;
-
+ 
     resp.features.forEach((innerResp) => {
       htmpList += `<li class="flex items-center">
                 <span class="w-1 h-1 bg-blue-600 rounded-full mr-2"></span> ${innerResp} </li>`;
@@ -205,10 +246,11 @@
             `;
   });
   console.log(htmpList)
-
+ 
 setTimeout(()=>{
     document.getElementById("cardData").innerHTML = htmpList;
 },100)
 </script>
 </body>
 </html>
+ 
