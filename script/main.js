@@ -128,7 +128,6 @@
           ],
         },
       ];
-
       let htmpList = "";
       solutions.forEach((resp) => {
         htmpList += `
@@ -154,12 +153,14 @@
       });
 
       function recursiveCheck(){
+        debugger
         let card = document.getElementById("cardData");
         if(card){
             card.innerHTML = htmpList
         }else{
             setTimeout(()=>{
                 recursiveCheck();
-            }, 20)
+            }, 10)
         }
       }
+      recursiveCheck()
