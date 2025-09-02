@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="custom_style.css">
-     <script>
+    <script>
       window.tailwind = {
         config: {
           darkMode: "class",
@@ -44,7 +44,7 @@
         }
       }
     </script>
- 
+
   </head>
   <body>
     <div class="min-h-screen bg-background">
@@ -164,14 +164,14 @@
           ],
         },
         {
-          icon: "Smartphone",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone h-8 w-8 text-primary" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>`,
           title: "Mobile-First Platform",
           description:
             "Complete mobile accessibility with QR code scanner for check-in/out, ensuring seamless workspace management from any device.",
           features: ["Mobile booking", "QR scanning", "On-the-go management"],
         },
         {
-          icon: "Shield",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-8 w-8 text-primary" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>`,
           title: "Secure Access Control",
           description:
             "Enterprise-grade security with facial recognition-based seat check-in and advanced access management features.",
@@ -182,7 +182,7 @@
           ],
         },
         {
-          icon: "Network",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network h-8 w-8 text-primary" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg>`,
           title: "BMS Integration",
           description:
             "API-based integration with other Building Management Systems for comprehensive facility management and automation.",
@@ -193,7 +193,7 @@
           ],
         },
         {
-          icon: "Zap",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-8 w-8 text-primary" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>`,
           title: "Predictive Technology",
           description:
             "Advanced space recommendation engine helps employees connect and collaborate while securing optimal workspace locations.",
@@ -204,7 +204,7 @@
           ],
         },
         {
-          icon: "Award",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-8 w-8 text-primary" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>`,
           title: "Cost-Effective Solution",
           description:
             "Unmatched value with significant cost advantage compared to leading market players, offering premium features at competitive pricing.",
@@ -223,7 +223,7 @@
             class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-2 transition">
             <div class="text-center mb-4">
               <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="lucide-map text-blue-600 text-2xl"></i>
+                ${resp.icon}
               </div>
               <h3 class="text-lg font-semibold">${resp.title}</h3>
             </div>
