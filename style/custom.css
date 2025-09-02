@@ -66,3 +66,7 @@
   --sidebar-border: 300 50% 100% / 0.1;
   --sidebar-ring: 300 0% 45%;
 }
+a.active{
+    color: #171717;
+    text-shadow: -2px 6px 15px #927777;
+}
