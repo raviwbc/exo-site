@@ -9,6 +9,10 @@ function  menuActive(){
             menuActive();
         },10)
     } else {
+        let full = window.location.href
+        if(full.includes('#')){
+            scrollToSection(full.split('#')[1]);
+        }
         let newList = tagname[0].getElementsByTagName('a');
         console.log(newList)
         Array.from(newList).forEach((element) => {
@@ -22,3 +26,7 @@ function  menuActive(){
     }
 }
 menuActive();
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
