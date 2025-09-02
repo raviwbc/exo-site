@@ -131,9 +131,9 @@
       let htmpList = "";
       solutions.forEach((resp) => {
         htmpList += `
-          <div
+          <div data-slots='card'
             class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-2 transition">
-            <div class="text-center mb-4">
+            <div data-slot="card-header" class="text-center mb-4">
               <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 ${resp.icon}
               </div>
@@ -164,3 +164,6 @@
         }
       }
       recursiveCheck()
+
+
+      

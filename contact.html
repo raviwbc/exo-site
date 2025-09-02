@@ -1,127 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Exo Office</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Exo Office</title>
     <link rel="stylesheet" href="./style/custom.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script/tailwindConfig.js"></script>
-</head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
     <span id="tapbar"></span>
-  <main class="flex-grow py-16">
-    <div class="container mx-auto px-4 lg:px-8">
-      <div class="max-w-6xl mx-auto">
+    <main class="flex-grow py-16">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-6xl mx-auto">
 
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            We'd love to hear from you. Whether you have a question about our solutions, 
-            need technical support, or want to explore partnership opportunities, 
-            our team is here to help.
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-12">
-
-          <div class="bg-white shadow rounded-lg p-6">
-            <h2 class="text-2xl font-bold mb-6">Send us a message</h2>
-            <form id="contactForm" method="POST" action="send.php" class="space-y-6">
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Full Name *</label>
-                <input type="text" id="name" name="name" 
-                  class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" required>
-              </div>
-              
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
-                <input type="email" id="email" name="email" 
-                  class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" required>
-              </div>
-
-              <div>
-                <label for="phone" class="block text-sm font-medium mb-2">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" 
-                  class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" required>
-              </div>
-
-              <div>
-                <label for="message" class="block text-sm font-medium mb-2">Message *</label>
-                <textarea id="message" name="message" rows="5"
-                  class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
-              </div>
-
-              <button type="submit" id="submitBtn"
-                class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                Send Message
-              </button>
-            </form>
-            <div id="formMessage" class="mt-4 text-center text-sm"></div>
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              We'd love to hear from you. Whether you have a question about our
+              solutions,
+              need technical support, or want to explore partnership
+              opportunities,
+              our team is here to help.
+            </p>
           </div>
 
-          <div class="space-y-8">
-            <div>
-              <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
-              <div class="space-y-6">
-                <div class="flex items-start space-x-4">
-                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    📧
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Email Us</h3>
-                    <p class="text-gray-600">sales@exooffice.com</p>
-                    <p class="text-sm text-gray-500">We'll respond within 24 hours</p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    📞
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Call Us</h3>
-                    <p class="text-gray-600">+91 81485 00687</p>
-                    <p class="text-sm text-gray-500">Mon-Fri 9AM-6PM IST</p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    📍
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Visit Us</h3>
-                    <p class="text-gray-600">A8/1, 11th Cross, Thillai Nagar West Extension</p>
-                    <p class="text-gray-600">Tiruchirappalli, Tamil Nadu, India – 620018</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div class="grid lg:grid-cols-2 gap-12">
 
             <div class="bg-white shadow rounded-lg p-6">
-              <h3 class="font-semibold mb-4">Business Hours</h3>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span class="text-gray-500">9:00 AM - 6:00 PM</span>
+              <h2 class="text-2xl font-bold mb-6">Send us a message</h2>
+              <form id="contactForm" method="POST" action="send.php"
+                class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-2">Full
+                    Name *</label>
+                  <input type="text" id="name" name="name"
+                    placeholder="John Doe"
+                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required>
                 </div>
-                <div class="flex justify-between">
-                  <span>Saturday</span>
-                  <span class="text-gray-500">10:00 AM - 4:00 PM</span>
+
+                <div>
+                  <label for="email"
+                    class="block text-sm font-medium mb-2">Email Address
+                    *</label>
+                  <input type="email" id="email" name="email"
+                    placeholder="john@example.com"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required>
                 </div>
-                <div class="flex justify-between">
-                  <span>Sunday</span>
-                  <span class="text-gray-500">Closed</span>
+
+                <div>
+                  <label for="phone"
+                    class="block text-sm font-medium mb-2">Phone Number
+                    *</label>
+                  <input type="tel" id="phone" name="phone"
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="+1 (555) 123-4567" required>
+                </div>
+
+                <div>
+                  <label for="message"
+                    class="block text-sm font-medium mb-2">Message *</label>
+                  <textarea id="message" name="message" rows="2"
+                    placeholder="Tell us about your project or inquiry"
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 hover:text-black h-9 px-4 py-2 has-[>svg]:px-3 w-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-send h-4 w-4 mr-2"
+                    aria-hidden="true"><path
+                      d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path
+                      d="m21.854 2.147-10.94 10.939"></path></svg>
+                  Send Message
+                </button>
+              </form>
+              <div id="formMessage" class="mt-4 text-center text-sm"></div>
+            </div>
+
+            <div class="space-y-8">
+              <div>
+                <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail h-6 w-6 text-primary"
+                        aria-hidden="true"><path
+                          d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect
+                          x="2" y="4" width="20" height="16"
+                          rx="2"></rect></svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Email Us</h3>
+                      <p class="text-gray-600">sales@exooffice.com</p>
+                      <p class="text-sm text-gray-500">We'll respond within 24
+                        hours</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone h-6 w-6 text-primary"
+                        aria-hidden="true"><path
+                          d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Call Us</h3>
+                      <p class="text-gray-600">+91 81485 00687</p>
+                      <p class="text-sm text-gray-500">Mon-Fri 9AM-6PM IST</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin h-6 w-6 text-primary"
+                        aria-hidden="true"><path
+                          d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle
+                          cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Visit Us</h3>
+                      <p class="text-gray-600">A8/1, 11th Cross, Thillai Nagar
+                        West Extension</p>
+                      <p class="text-gray-600">Tiruchirappalli, Tamil Nadu,
+                        India – 620018</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white shadow rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Business Hours</h3>
+                <div class="space-y-2">
+                  <div class="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span class="text-gray-500">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Saturday</span>
+                    <span class="text-gray-500">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Sunday</span>
+                    <span class="text-gray-500">Closed</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
-    </div>
-  </main>
-  <span id="footer"></span>
+    </main>
+    <span id="footer"></span>
 
     <script>
     fetch("components/tabnav.html")
@@ -143,6 +189,6 @@
       });
   </script>
 
-  <script src="script/contact.js"></script>
-</body>
+    <script src="script/contact.js"></script>
+  </body>
 </html>
