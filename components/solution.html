@@ -9,7 +9,8 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-6">
         Facility Workspace Management System
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      <p
+        class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
         UDesk Pro redefines what it means to work with predictive technology and
         advanced space recommendation engine that helps employees connect and
         collaborate while securing and utilizing space within their offices.
@@ -18,72 +19,89 @@
 
     <!-- Key Benefits -->
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-      <div
+      <div data-slot="card"
         class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 text-center border-0 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-zap h-12 w-12 text-primary mx-auto mb-4"
-          aria-hidden="true"><path
-            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
-        <h3 class="text-lg font-semibold mb-2">Increased Productivity</h3>
-        <p class="text-gray-600 text-sm">
-          Maximize employee productivity through efficient workspace management
-          and smart seating arrangements.
-        </p>
+        <div data-slot="card-content" class="p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-zap h-12 w-12 text-primary mx-auto mb-4"
+            aria-hidden="true"><path
+              d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+          <h3 class="text-lg font-semibold mb-2">Increased Productivity</h3>
+          <p class="text-gray-600 text-sm">
+            Maximize employee productivity through efficient workspace
+            management
+            and smart seating arrangements.
+          </p>
+        </div>
+
       </div>
 
-      <div
+      <div data-slot="card"
         class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 text-center border-0 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-users h-12 w-12 text-primary mx-auto mb-4"
-          aria-hidden="true"><path
-            d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path
-            d="M16 3.128a4 4 0 0 1 0 7.744"></path><path
-            d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7"
-            r="4"></circle></svg>
-        <h3 class="text-lg font-semibold mb-2">Improved Networking</h3>
-        <p class="text-gray-600 text-sm">
-          Enhance social connectivity and collaboration opportunities among
-          colleagues through strategic seating.
-        </p>
+        <div data-slot="card-content" class="p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-users h-12 w-12 text-primary mx-auto mb-4"
+            aria-hidden="true"><path
+              d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path
+              d="M16 3.128a4 4 0 0 1 0 7.744"></path><path
+              d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7"
+              r="4"></circle></svg>
+          <h3 class="text-lg font-semibold mb-2">Improved Networking</h3>
+          <p class="text-gray-600 text-sm">
+            Enhance social connectivity and collaboration opportunities among
+            colleagues through strategic seating.
+          </p>
+        </div>
+
       </div>
 
-      <div
+      <div data-slot="card"
         class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 text-center border-0 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-building2 lucide-building-2 h-12 w-12 text-primary mx-auto mb-4"
-          aria-hidden="true"><path
-            d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path
-            d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path
-            d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path
-            d="M10 6h4"></path><path d="M10 10h4"></path><path
-            d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-        <h3 class="text-lg font-semibold mb-2">Space Optimization</h3>
-        <p class="text-gray-600 text-sm">
-          Maximize utilization of office space for an extremely mobile
-          workforce, reducing real estate costs.
-        </p>
+        <div data-slot="card-content" class="p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-building2 lucide-building-2 h-12 w-12 text-primary mx-auto mb-4"
+            aria-hidden="true"><path
+              d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path
+              d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path
+              d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path
+              d="M10 6h4"></path><path d="M10 10h4"></path><path
+              d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+          <h3 class="text-lg font-semibold mb-2">Space Optimization</h3>
+          <p class="text-gray-600 text-sm">
+            Maximize utilization of office space for an extremely mobile
+            workforce, reducing real estate costs.
+          </p>
+        </div>
+
       </div>
 
-      <div
+      <div data-slot="card"
         class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 text-center border-0 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-award h-12 w-12 text-primary mx-auto mb-4"
-          aria-hidden="true"><path
-            d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle
-            cx="12" cy="8" r="6"></circle></svg>
-        <h3 class="text-lg font-semibold mb-2">Enhanced Experience</h3>
-        <p class="text-gray-600 text-sm">
-          Improve customer and employee experience with seamless, modern
-          workspace management solutions.
-        </p>
+        <div data-slot="card-content" class="p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-award h-12 w-12 text-primary mx-auto mb-4"
+            aria-hidden="true"><path
+              d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle
+              cx="12" cy="8" r="6"></circle></svg>
+          <h3 class="text-lg font-semibold mb-2">Enhanced Experience</h3>
+          <p class="text-gray-600 text-sm">
+            Improve customer and employee experience with seamless, modern
+            workspace management solutions.
+          </p>
+        </div>
+
       </div>
     </div>
 
