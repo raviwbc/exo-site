@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Exo Office</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script/tailwindConfig.js"></script>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
-
-
- 
-
-
+    <span id="tapbar"></span>
   <main class="flex-grow py-16">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="max-w-6xl mx-auto">
@@ -123,6 +121,27 @@
       </div>
     </div>
   </main>
+  <span id="footer"></span>
+
+    <script>
+    fetch("components/tabnav.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("tapbar").innerHTML = data;
+      });
+
+    // fetch("components/about.html")
+    //   .then((response) => response.text())
+    //   .then((data) => {
+    //     document.getElementById("about").innerHTML = data;
+    //   });
+
+    fetch("components/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
 
   <script src="script/contact.js"></script>
 </body>
