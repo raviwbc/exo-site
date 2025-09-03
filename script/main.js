@@ -164,6 +164,24 @@
         }
       }
       recursiveCheck()
+      
+  document.addEventListener("DOMContentLoaded", () => {
+    debugger
+    const backToTopBtn = document.getElementById("backToTop");
 
+    // Show button after scrolling 200px
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+
+    // Smooth scroll to top
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
 
       
