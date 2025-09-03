@@ -167,9 +167,15 @@
       
   document.addEventListener("DOMContentLoaded", () => {
     debugger
-    const backToTopBtn = document.getElementById("backToTop");
+    scrollfn();
 
-    // Show button after scrolling 200px
+
+  });
+
+  function scrollfn(){
+        const backToTopBtn = document.getElementById("backToTop");
+        if(backToTopBtn){
+        // Show button after scrolling 200px
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
         backToTopBtn.style.display = "block";
@@ -182,6 +188,12 @@
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
+  }else{
+    setTimeout(()=>{
+      scrollfn();
+    },20)
+  }
+
+  }
 
       
