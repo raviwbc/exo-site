@@ -4,6 +4,25 @@
  require_once "vendor/autoload.php";
  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $secret = "6LfXibwrAAAAAHmtYBc4AUfcwHrn_88NlTjS2Upi"; 
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+    $remoteip = $_SERVER['REMOTE_ADDR'];
+
+    $verify = file_get_contents(
+        "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$recaptcha_response&remoteip=$remoteip"
+    );
+    $captcha_success = json_decode($verify);
+
+    if (!$captcha_success->success) {
+        $response = [
+            'status' => 'error',
+            'message' => 'Please verify you are not a robot.'
+        ];
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit; 
+    }
+
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
   $phone = htmlspecialchars($_POST['phone']);
