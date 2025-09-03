@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy - Exo Office</title>
+<link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script/tailwindConfig.js"></script>
+    <script src="./script/navbar.js" defer></script>
+  </head>
+  <body>
+    <span id="tapbar"></span>
+    <div class="min-h-screen bg-background">
+      <main>
+        <span id="policy"></span>
+      </main>
+      <span id="footer"></span>
+    </div>
+  </body>
+  <script>
+    fetch("components/tabnav.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("tapbar").innerHTML = data;
+      });
+
+    fetch("components/policy.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("policy").innerHTML = data;
+      });
+
+    fetch("components/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+  <script src="./script/pageLoader.js"></script>
+</html>
