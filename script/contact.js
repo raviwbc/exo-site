@@ -7,6 +7,16 @@ function showToast(message, type = "success") {
   }, 5000); 
 }
 
+function resetRecaptcha() {
+
+    if (grecaptcha) {
+
+        grecaptcha.reset(); // resets the reCAPTCHA widget
+
+    }
+
+}
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
   const btn = document.getElementById("submitBtn");
@@ -23,6 +33,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   })
     .then((response) => response.json())
     .then((data) => {
+ resetRecaptcha();
       btn.disabled = false;
       btn.textContent = "Send Message";
       if (data.status === "send") {
